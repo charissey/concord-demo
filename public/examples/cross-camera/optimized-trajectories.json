@@ -3,8 +3,8 @@
     "vehicleId": "join_unique_074f20c7",
     "attributes": {
       "class": "sedan",
-      "color": "blue",
-      "subtype": "suv"
+      "color": "silver",
+      "subtype": "sedan"
     },
     "timeline": [
       {
@@ -73,7 +73,7 @@
     "attributes": {
       "class": "truck",
       "color": "silver",
-      "subtype": "pickup"
+      "subtype": "tractor trailer"
     },
     "timeline": [
       {
@@ -95,7 +95,7 @@
     "vehicleId": "join_unique_f8784a15",
     "attributes": {
       "class": "sedan",
-      "color": "blue",
+      "color": "black",
       "subtype": "suv"
     },
     "timeline": [
@@ -118,7 +118,7 @@
     "vehicleId": "join_unique_c321b9bd",
     "attributes": {
       "class": "suv",
-      "color": "gray",
+      "color": "blue",
       "subtype": "suv"
     },
     "timeline": [
@@ -141,7 +141,7 @@
     "vehicleId": "join_unique_a47bdb7c",
     "attributes": {
       "class": "sedan",
-      "color": "blue",
+      "color": "black",
       "subtype": "suv"
     },
     "timeline": [
@@ -164,7 +164,7 @@
     "vehicleId": "join_unique_afc0460c",
     "attributes": {
       "class": "sedan",
-      "color": "white",
+      "color": "black",
       "subtype": "suv"
     },
     "timeline": [
@@ -209,9 +209,9 @@
   {
     "vehicleId": "join_unique_309e0cb9",
     "attributes": {
-      "class": "suv",
-      "color": "blue",
-      "subtype": "suv"
+      "class": "sedan",
+      "color": "black",
+      "subtype": "sedan"
     },
     "timeline": [
       {
@@ -232,9 +232,9 @@
   {
     "vehicleId": "join_unique_984e4ae4",
     "attributes": {
-      "class": "suv",
-      "color": "gray",
-      "subtype": "suv"
+      "class": "truck",
+      "color": "white",
+      "subtype": "pickup"
     },
     "timeline": [
       {
@@ -256,8 +256,8 @@
     "vehicleId": "join_unique_3767633e",
     "attributes": {
       "class": "sedan",
-      "color": "silver",
-      "subtype": "suv"
+      "color": "white",
+      "subtype": "sedan"
     },
     "timeline": [
       {
