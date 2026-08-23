@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { qualifiedTrackId, trajectorySelectsTrack } from './trackIdentity'
+import { cameraLetter, qualifiedTrackId, trajectoryPairLabel, trajectorySelectsTrack } from './trackIdentity'
 import type { Trajectory } from '../types'
 
 const selected: Trajectory = {
@@ -32,5 +32,14 @@ describe('camera-qualified track selection', () => {
   it('renders camera-qualified labels', () => {
     expect(qualifiedTrackId('cam-i24v-highway2', 'veh-20')).toBe('Track 20A')
     expect(qualifiedTrackId('cam-i24v-highway3', 'veh-20')).toBe('Track 20B')
+  })
+
+  it('renders a friendly joined pair without naming the cameras', () => {
+    expect(cameraLetter('cam-i24v-highway2')).toBe('A')
+    expect(cameraLetter('cam-i24v-highway3')).toBe('B')
+    expect(trajectoryPairLabel(selected)).toBe('Track 20A / Track 28B')
+    expect(trajectoryPairLabel({ ...selected, leftTrackId: undefined, rightTrackId: undefined })).toBe(
+      'joined-vehicle',
+    )
   })
 })

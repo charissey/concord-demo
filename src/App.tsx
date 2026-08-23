@@ -6,6 +6,7 @@ import { PipelineExplorer, type Stage } from './components/PipelineExplorer'
 import { SynchronizedVideos } from './components/SynchronizedVideos'
 import { examples } from './examples/registry'
 import { loadReplayData } from './lib/replay'
+import { cameraLetter, trajectoryPairLabel } from './lib/trackIdentity'
 import type { ReplayData, Trajectory } from './types'
 
 function App() {
@@ -150,9 +151,9 @@ function App() {
                     key={`${trajectory.vehicleId}-${index}`}
                     onClick={() => setSelected(trajectory)}
                   >
-                    <span className="vehicle-id">{trajectory.vehicleId}</span>
+                    <span className="vehicle-id">{trajectoryPairLabel(trajectory)}</span>
                     <strong>{trajectory.attributes.color} {trajectory.attributes.subtype}</strong>
-                    <small>{trajectory.timeline.map((item) => item.cameraId.replace('cam-i24v-', '')).join(' → ')}</small>
+                    <small>{trajectory.timeline.map((item) => cameraLetter(item.cameraId)).join(' → ')}</small>
                     <em>{trajectory.matchScore ? `${(trajectory.matchScore * 100).toFixed(1)}% match` : 'semantic match'}</em>
                   </button>
                 ))}
