@@ -164,8 +164,8 @@
     "vehicleId": "join_unique_afc0460c",
     "attributes": {
       "class": "sedan",
-      "color": "black",
-      "subtype": "suv"
+      "color": "white",
+      "subtype": "sedan"
     },
     "timeline": [
       {
