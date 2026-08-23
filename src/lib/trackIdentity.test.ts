@@ -30,8 +30,7 @@ describe('camera-qualified track selection', () => {
   })
 
   it('renders camera-qualified labels', () => {
-    expect(qualifiedTrackId('cam-i24v-highway3', 'veh-20')).toBe(
-      'highway3:veh-20',
-    )
+    expect(qualifiedTrackId('cam-i24v-highway2', 'veh-20')).toBe('Track 20A')
+    expect(qualifiedTrackId('cam-i24v-highway3', 'veh-20')).toBe('Track 20B')
   })
 })

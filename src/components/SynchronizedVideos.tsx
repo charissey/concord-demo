@@ -143,7 +143,9 @@ export function SynchronizedVideos({
                   )
                 })}
               </svg>
-              <span className="camera-badge">{camera.label}</span>
+              <span className="camera-badge">
+                {camera.label} · {camera.id.endsWith('highway2') ? 'A' : 'B'}
+              </span>
               <span className="frame-badge">frame {frame}</span>
             </div>
             <figcaption>{camera.id}</figcaption>

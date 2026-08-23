@@ -1,7 +1,13 @@
 import type { Track, Trajectory } from '../types'
 
 export function qualifiedTrackId(cameraId: string, trackId: string): string {
-  return `${cameraId.replace('cam-i24v-', '')}:${trackId}`
+  const cameraSuffix = cameraId.endsWith('highway2')
+    ? 'A'
+    : cameraId.endsWith('highway3')
+      ? 'B'
+      : `-${cameraId.replace('cam-i24v-', '')}`
+  const trackNumber = trackId.replace(/^veh-/, '')
+  return `Track ${trackNumber}${cameraSuffix}`
 }
 
 export function trajectorySelectsTrack(
