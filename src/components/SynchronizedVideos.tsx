@@ -8,6 +8,7 @@ import {
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Camera, Detection, Track, Trajectory } from '../types'
 import { formatSeconds, frameAt } from '../lib/replay'
+import { qualifiedTrackId, trajectorySelectsTrack } from '../lib/trackIdentity'
 
 interface Props {
   cameras: Camera[]
@@ -86,9 +87,7 @@ export function SynchronizedVideos({
           color: track.color,
           subtype: track.subtype,
           trackId: track.trackId,
-          highlighted:
-            selectedTrajectory?.leftTrackId === track.trackId ||
-            selectedTrajectory?.rightTrackId === track.trackId,
+          highlighted: trajectorySelectsTrack(selectedTrajectory, track),
         })
         map.set(track.cameraId, rows)
       })
@@ -132,11 +131,13 @@ export function SynchronizedVideos({
                   return (
                     <g
                       className={item.highlighted ? 'box highlight' : 'box'}
-                      key={`${item.trackId ?? item.vehicleClass}-${boxIndex}`}
+                      key={`${camera.id}-${item.trackId ?? item.vehicleClass}-${boxIndex}`}
                     >
                       <rect x={x1} y={y1} width={x2 - x1} height={y2 - y1} />
                       <text x={x1} y={Math.max(18, y1 - 7)}>
-                        {item.trackId ?? item.vehicleClass}
+                        {item.trackId
+                          ? qualifiedTrackId(camera.id, item.trackId)
+                          : item.vehicleClass}
                       </text>
                     </g>
                   )
