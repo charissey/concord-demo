@@ -135,6 +135,8 @@ function App() {
             stage={mode === 'semantic' ? 0 : stage}
             detections={data.detections}
             tracks={data.tracks}
+            candidates={data.candidates}
+            trajectories={data.optimizedTrajectories}
             selectedTrajectory={selected}
           />
 
