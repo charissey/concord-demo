@@ -161,6 +161,29 @@
     "rightTrackId": "veh-11"
   },
   {
+    "vehicleId": "join_unique_redpickup26",
+    "attributes": {
+      "class": "truck",
+      "color": "red",
+      "subtype": "flatbed"
+    },
+    "timeline": [
+      {
+        "cameraId": "cam-i24v-highway2",
+        "entered": 0.867533,
+        "exited": 0.967633
+      },
+      {
+        "cameraId": "cam-i24v-highway3",
+        "entered": 0.867533,
+        "exited": 0.967633
+      }
+    ],
+    "matchScore": 0.8485770863825516,
+    "leftTrackId": "veh-1",
+    "rightTrackId": "veh-4"
+  },
+  {
     "vehicleId": "join_unique_afc0460c",
     "attributes": {
       "class": "sedan",
@@ -251,6 +274,30 @@
     "matchScore": 0.8184057283186698,
     "leftTrackId": "veh-15",
     "rightTrackId": "veh-24"
+  },
+  {
+    "vehicleId": "join_unique_3b314f83",
+    "attributes": {
+      "class": "truck",
+      "color": "silver",
+      "subtype": "pickup"
+    },
+    "timeline": [
+      {
+        "cameraId": "cam-i24v-highway2",
+        "entered": 4.371033,
+        "exited": 4.938267
+      },
+      {
+        "cameraId": "cam-i24v-highway3",
+        "entered": 4.170833,
+        "exited": 4.938267
+      }
+    ],
+    "matchScore": 0.8029128891312,
+    "leftTrackId": "veh-12",
+    "rightTrackId": "veh-16",
+    "falsePositive": true
   },
   {
     "vehicleId": "join_unique_3767633e",

@@ -147,14 +147,20 @@ function App() {
               <div className="trajectory-grid">
                 {visibleTrajectories.map((trajectory, index) => (
                   <button
-                    className={selected?.vehicleId === trajectory.vehicleId ? 'trajectory active' : 'trajectory'}
+                    className={[
+                      'trajectory',
+                      selected?.vehicleId === trajectory.vehicleId ? 'active' : '',
+                      trajectory.falsePositive ? 'false-positive' : '',
+                    ].filter(Boolean).join(' ')}
                     key={`${trajectory.vehicleId}-${index}`}
                     onClick={() => setSelected(trajectory)}
                   >
                     <span className="vehicle-id">{trajectoryPairLabel(trajectory)}</span>
                     <strong>{trajectory.attributes.color} {trajectory.attributes.subtype}</strong>
                     <small>{trajectory.timeline.map((item) => cameraLetter(item.cameraId)).join(' → ')}</small>
-                    <em>{trajectory.matchScore ? `${(trajectory.matchScore * 100).toFixed(1)}% match` : 'semantic match'}</em>
+                    <em>{trajectory.falsePositive
+                      ? 'false positive'
+                      : trajectory.matchScore ? `${(trajectory.matchScore * 100).toFixed(1)}% match` : 'semantic match'}</em>
                   </button>
                 ))}
               </div>

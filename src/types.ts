@@ -31,6 +31,7 @@ export interface Track {
   confidence: number
   path: Array<{ frame: number; x: number; y: number }>
   boxes: Array<{ frame: number; bbox: [number, number, number, number] }>
+  hiddenUnlessSelected?: boolean
 }
 
 export interface TimelineSegment {
@@ -46,6 +47,7 @@ export interface Trajectory {
   matchScore?: number
   leftTrackId?: string
   rightTrackId?: string
+  falsePositive?: boolean
 }
 
 export interface JoinCandidate {

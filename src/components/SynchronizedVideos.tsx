@@ -75,6 +75,9 @@ export function SynchronizedVideos({
     }
     if (stage >= 2) {
       tracks.forEach((track) => {
+        if (track.hiddenUnlessSelected && !trajectorySelectsTrack(selectedTrajectory, track)) {
+          return
+        }
         const box = track.boxes.find((item) => Math.abs(item.frame - frame) <= 1)
         if (!box) return
         const rows = map.get(track.cameraId) ?? []

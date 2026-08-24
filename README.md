@@ -13,6 +13,10 @@ The site compares:
 The deployed browser application never runs a model and does not require an API
 key. It only reads versioned MP4 and JSON artifacts.
 
+The live site currently includes **one** recorded example: cross-camera vehicle
+association. Other paper case studies are reserved in
+`src/examples/registry.ts` but are not on the website yet.
+
 ## Local development
 
 ```bash
@@ -71,8 +75,9 @@ model versions and nondeterministic inference can change outputs.
 
 ## Adding an example
 
-Create `public/examples/<slug>/manifest.json` plus its static assets, then add one
-entry to `src/examples/registry.ts`. The application shell and GitHub Pages
+The website still ships only the cross-camera replay. To add another case study,
+create `public/examples/<slug>/manifest.json` plus its static assets, then add
+one entry to `src/examples/registry.ts`. The application shell and GitHub Pages
 deployment need no model-specific changes.
 
 ## Deployment

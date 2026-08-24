@@ -42,6 +42,12 @@
     "accepted": true
   },
   {
+    "leftTrackId": "veh-1",
+    "rightTrackId": "veh-4",
+    "score": 0.8485770863825516,
+    "accepted": true
+  },
+  {
     "leftTrackId": "veh-9",
     "rightTrackId": "veh-10",
     "score": 0.8449244530356607,
@@ -70,6 +76,12 @@
     "rightTrackId": "veh-28",
     "score": 0.8074782689422566,
     "accepted": false
+  },
+  {
+    "leftTrackId": "veh-12",
+    "rightTrackId": "veh-16",
+    "score": 0.8029128891312,
+    "accepted": true
   },
   {
     "leftTrackId": "veh-6",
