@@ -79,7 +79,7 @@ function App() {
         <nav>
           <a href="#demo">Demo</a>
           <a href="#results">Results</a>
-          <a href="https://github.com/chanwutk/mmds/pull/4" target="_blank">MMDS <GitBranch size={15} /></a>
+          <a href="https://github.com/chanwutk/mmds" target="_blank">MMDS <GitBranch size={15} /></a>
         </nav>
       </header>
 
@@ -94,7 +94,7 @@ function App() {
             </p>
             <div className="hero-actions">
               <a className="primary-action" href="#demo">Explore the replay <ArrowDown size={17} /></a>
-              <a href="https://github.com/chanwutk/mmds/pull/4" target="_blank">View source <ExternalLink size={15} /></a>
+              <a href="https://github.com/chanwutk/mmds" target="_blank">View source <ExternalLink size={15} /></a>
             </div>
           </div>
           <div className="hero-diagram" aria-label="Query rewrite summary">
